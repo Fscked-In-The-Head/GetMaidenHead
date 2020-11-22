@@ -1,4 +1,4 @@
-function getMaidenHead(lat,lon){
+getMaidenHead(lat,lon){
   var U = 'ABCDEFGHIJKLMNOPQRSTUVWX';
   var L = U.toLowerCase();
   //Latitude
@@ -12,6 +12,7 @@ function getMaidenHead(lat,lon){
   extLat = Math.floor(t);
   t=(t-extLat)*24;
   supLat = Math.floor(t);
+  //Longitude
   t = (lon+180)/20;
   fLon = Math.floor(t);
   t = (t % fLon)*10;
@@ -22,6 +23,6 @@ function getMaidenHead(lat,lon){
   extLon = Math.floor(t);
   t=(t-extLon)*24;
   supLon = Math.floor(t);
-  return U[fLon]+U[fLat]+sqLon+sqLat+L[subLon]+L[subLat]
-    +extLon+extLat+U[supLon]+U[supLat];
+  return U[fLon]+U[fLat]+sqLon+sqLat+L[subLon]
+    +L[subLat]+extLon+extLat+U[supLon]+U[supLat];
 }
