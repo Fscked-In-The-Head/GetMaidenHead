@@ -1,4 +1,6 @@
 # GetMaidenHead
-Lightweight conversion of decimal coordinates to maidenhead locator  for ham radio purposes.
+Lightweight conversion of decimal coordinates to maidenhead locator, up to 5 pairs precision.
 Written to work with bangle.js.
-Most maidenhead calculators use only 6 characters of precision, which is only enough accuracy to determine a rough neighbourhood. That's fine for HF comms, but VHF can make use of extended accuracy. Eight characters brings that down to about a block, which is enough to meet someone when driving or on foot and sharing locators over radio. Ten would point at one building, and I may expand to that in the future.
+Based on N3WP's description of grid square calculations
+https://n3wp.com/topics/articles/ham/operating/maidenhead.html
+Validated at https://k7fry.com/grid/
